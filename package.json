@@ -1,6 +1,6 @@
 {
   "name": "faceted",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Tiny parser for creating multi faceted search from strings.",
   "keywords": [
     "search",
