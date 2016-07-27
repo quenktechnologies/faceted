@@ -20,32 +20,15 @@ class Ast {
     }
 
     /**
-     * integer
+     * number
      * @param {string} value 
      * @param {Location} location 
      * @returns {object}
      */
-    integer(value, location) {
+    number(value, location) {
 
         return {
-            type: 'integer',
-            value,
-            location
-
-        }
-
-    }
-
-    /**
-     * float
-     * @param {string} value 
-     * @param {Location} location 
-     * @returns {object}
-     */
-    float(value, location) {
-
-        return {
-            type: 'float',
+            type: 'number',
             value,
             location
         };

@@ -132,10 +132,10 @@ case 16:
  this.$ = yy.ast.boolean(false, this._$);          
 break;
 case 17:
- this.$ = yy.ast.integer(parseInt($$[$0]), this._$);   
+ this.$ = yy.ast.number(parseInt($$[$0]), this._$);    
 break;
 case 18:
- this.$ = yy.ast.float(parseFloat($$[$0]), this._$);   
+ this.$ = yy.ast.number(parseFloat($$[$0]), this._$);  
 break;
 case 19:
  this.$ = yy.ast.string($$[$0-1], this._$);              

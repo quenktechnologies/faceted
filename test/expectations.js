@@ -92,7 +92,7 @@ export default {
             'field': 'stars',
             'op': '>',
             'value': {
-                'type': 'integer',
+                'type': 'number',
                 'value': 22,
                 'location': {
                     'first_line': 1,
@@ -121,7 +121,7 @@ export default {
             'field': 'age',
             'op': '>',
             'value': {
-                'type': 'integer',
+                'type': 'number',
                 'value': 14,
                 'location': {
                     'first_line': 1,
@@ -140,7 +140,7 @@ export default {
             'field': 'rank',
             'op': '<',
             'value': {
-                'type': 'integer',
+                'type': 'number',
                 'value': 23,
                 'location': {
                     'first_line': 1,
@@ -159,7 +159,7 @@ export default {
             'field': 'price',
             'op': '>=',
             'value': {
-                'type': 'float',
+                'type': 'number',
                 'value': 22.4,
                 'location': {
                     'first_line': 1,
@@ -178,7 +178,7 @@ export default {
             'field': 'discount',
             'op': '<=',
             'value': {
-                'type': 'float',
+                'type': 'number',
                 'value': 5.4,
                 'location': {
                     'first_line': 1,

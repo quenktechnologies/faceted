@@ -92,8 +92,8 @@ value_list
 value
            : TRUE                          { $$ = yy.ast.boolean(true, @$);           }
            | FALSE                         { $$ = yy.ast.boolean(false, @$);          }
-           | INTEGER                       { $$ = yy.ast.integer(parseInt($1), @$);   }
-           | FLOAT                         { $$ = yy.ast.float(parseFloat($1), @$);   }
+           | INTEGER                       { $$ = yy.ast.number(parseInt($1), @$);    }
+           | FLOAT                         { $$ = yy.ast.number(parseFloat($1), @$);  }
            | '"' TEXT '"'                  { $$ = yy.ast.string($2, @$);              }
            | FIELD                         { $$ = yy.ast.string($1, @$);              }
            | '/' PATTERN '/'               { $$ = yy.ast.regexp($2, @$);              }
