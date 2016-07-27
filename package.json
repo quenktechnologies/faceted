@@ -1,0 +1,24 @@
+{
+    "name": "faceted",
+    "version": "0.0.2",
+    "description": "Tiny parser for creating multi faceted search from strings.",
+    "keywords":["search", "facet", "query"],
+    "main": "lib/index.js",
+    "files": [
+        "lib"
+    ],
+    "scripts": {
+        "parser": "./node_modules/.bin/jison -o src/parser.js src/lang.y",
+        "test": "./node_modules/.bin/mocha --opts mocha.opts test/parse",
+        "build": "rm -R lib; node_modules/.bin/babel -D -w src -s true -d lib"
+    },
+    "author": "Lasana Murray <lmurray@quenk.com> (http://quenk.com)",
+    "license": "Apache-2.0",
+    "devDependencies": {
+        "babel-cli": "^6.11.4",
+        "babel-preset-es2015": "^6.6.0",
+        "jison": "^0.4.17",
+        "mocha": "^2.4.5",
+        "must": "^0.13.1"
+    }
+}
