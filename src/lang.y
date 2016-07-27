@@ -66,13 +66,16 @@ filters
 filter      
 
            : FIELD ':' value 
-              {$$ = yy.ast.filter($1, '=', $3, @$);   }
+             {$$ = yy.ast.filter($1, '=', $3, @$);   }
                 
            | FIELD ':' operator value 
-              {$$ = yy.ast.filter($1, $3, $4, @$);    }
+             {$$ = yy.ast.filter($1, $3, $4, @$);    }
            
            | FIELD ':' '[' value_list ']' 
-              {$$ = yy.ast.filter($1, 'in', $4, @$);  }
+             {$$ = yy.ast.filter($1, 'in', $4, @$);  }
+
+           | FIELD ':' pattern
+             {$$ = yy.ast.filter($1, '=', $3, @$);   }
            ;
 
 operator   
@@ -82,6 +85,11 @@ operator
            | '>='                          { $$ = '>=';                  }
            | '<='                          { $$ = '<=';                  }
            | '='                           { $$ = '=';                   }
+           ;
+
+pattern
+
+           : '/' PATTERN '/'               { $$ = yy.ast.regexp($2, @$);              }
            ;
 
 value_list
@@ -96,5 +104,4 @@ value
            | FLOAT                         { $$ = yy.ast.number(parseFloat($1), @$);  }
            | '"' TEXT '"'                  { $$ = yy.ast.string($2, @$);              }
            | FIELD                         { $$ = yy.ast.string($1, @$);              }
-           | '/' PATTERN '/'               { $$ = yy.ast.regexp($2, @$);              }
            ;

@@ -85,7 +85,7 @@ class Ast {
 
     /**
      * filter
-     * @param {string} field 
+     * @param {Field} field 
      * @param {string} op 
      * @param {*} value
      * @returns {object}
@@ -127,14 +127,14 @@ class Ast {
      * @returns
      */
     or(lval, rval, location) {
-    
- return {
+
+        return {
             type: 'or',
             lval,
             rval,
             location
         };
-    
+
     }
 
     /**
