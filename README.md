@@ -1,5 +1,7 @@
 # Faceted
 
+**No Longer Maintained. Archived for future reference.**
+
 Tiny parser for creating multi faceted search from strings.
 
 ## Installation
